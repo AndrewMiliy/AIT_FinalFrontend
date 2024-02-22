@@ -107,13 +107,22 @@ body {
 }
 
 .login .inputBox input:focus~span,
-.login .inputBox input:valid~span {
+.login .inputBox input:valid~span{
     transform: translate(15px, -10px);
     font-size: 0.75em;
     background: #fff;
     color: #222;
     padding: 2px 5px;
 }
+
+.login .inputBox input:-webkit-autofill~span {
+    transform: translate(15px, -10px);
+        font-size: 0.75em;
+        background: #fff;
+        color: #222;
+        padding: 2px 5px;
+    }
+
 
 .login .inputBox button[type="submit"] {
     width: 100%;
@@ -170,7 +179,9 @@ body {
         0 0 60px #f0f;
 }
 
-/*input:-webkit-autofill {
-    background-color: transparent !important;
-    -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1) inset !important;
-}*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000000s ease-in-out 0s;
+}

@@ -52,11 +52,11 @@ const LoginPage = () => {
         <h2>Login</h2>
         <form onSubmit={handleSubmit} className='card' style={{ pointerEvents: 'all' }}>
           <div className='inputBox'>
-            <input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input name='username' type="text" required value={username} onChange={(e) => setUsername(e.target.value)}  />
             <span>Username</span>
           </div>
           <div className='inputBox'>
-            <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input name='password' type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
             <span>Password</span>
           </div>
           <div className='inputBox'>

@@ -13,6 +13,8 @@ const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
