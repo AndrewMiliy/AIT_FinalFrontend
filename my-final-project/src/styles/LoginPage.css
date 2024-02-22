@@ -1,0 +1,105 @@
+/* FILEPATH: /d:/AIT/FinalFrontend/my-final-project/src/styles/LoginPage.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 4px;
+}
+
+.container .box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: rgba(45, 45, 45, 1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--color), transparent, transparent);
+    width: 300px;
+    height: 300px;
+    transition: 5s, top 0.1s, left 0.1s;
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: rgba(45, 45, 45, 0.9);
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.login h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.login .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.login .inputBox input {
+    width: 100%;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border: 1px solid #000;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.login .inputBox span {
+    position: absolute;
+    font-size: 1em;
+    left: 0;
+    padding: 20px 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+}
+
