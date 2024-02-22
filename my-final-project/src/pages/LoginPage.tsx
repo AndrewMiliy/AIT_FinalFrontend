@@ -15,6 +15,9 @@ const LoginPage = () => {
   const boxRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
+    setUsername('');
+    setPassword('');
+
     boxRef.current.forEach((box, index) => {
       box.style.setProperty('--color', `hsl(${index * 100}, 100%, 50%)`);
       box.onmousemove = function (e) {
@@ -58,7 +61,7 @@ const LoginPage = () => {
             <span>Username</span>
           </div>
           <div className='inputBox'>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
             <span>Password</span>
           </div>
           <div className='inputBox'>
@@ -66,7 +69,7 @@ const LoginPage = () => {
           </div>
           <div className='group'>
             <a href="#">Forgot password</a>
-            <a href="">Sign up</a>
+            <a href="/register">Sign up</a>
           </div>
         </form>
       </div>
