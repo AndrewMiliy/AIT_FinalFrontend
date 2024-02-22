@@ -15,9 +15,6 @@ const LoginPage = () => {
   const boxRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    setUsername('');
-    setPassword('');
-
     boxRef.current.forEach((box, index) => {
       box.style.setProperty('--color', `hsl(${index * 100}, 100%, 50%)`);
       box.onmousemove = function (e) {
@@ -28,6 +25,9 @@ const LoginPage = () => {
         box.style.setProperty('--y', `${y}px`);
       };
     });
+
+    setUsername("");
+    setPassword("");
   }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

@@ -78,7 +78,7 @@ body {
     margin-top: 30px;
 }
 
-.login .inputBox input{
+.login .inputBox input {
     width: 100%;
     padding: 20px 25px;
     background: rgba(255, 255, 255, 0.1);
@@ -147,7 +147,7 @@ body {
     justify-content: space-between;
 }
 
-.group a{
+.group a {
     color: #222;
     background: #fff;
     padding: 2px 5px;
@@ -166,6 +166,6 @@ body {
     color: #fff;
     font-weight: 500;
     box-shadow: 0 0 15px #f0f,
-                0 0 30px #f0f,
-                0 0 60px #f0f;
+        0 0 30px #f0f,
+        0 0 60px #f0f;
 }
