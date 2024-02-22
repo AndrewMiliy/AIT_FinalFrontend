@@ -1,11 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/LoginPage.css';
-
-interface User {
-  username: string;
-  password: string;
-}
+import '../styles/AuthPage.css';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -26,8 +21,8 @@ const LoginPage = () => {
       };
     });
 
-    setUsername("");
-    setPassword("");
+    setUsername(username);
+    setPassword(password);
   }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
