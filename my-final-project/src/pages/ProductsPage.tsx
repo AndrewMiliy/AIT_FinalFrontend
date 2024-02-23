@@ -6,14 +6,13 @@ interface Product {
   title: string;
   description: string;
   price: number;
+  images: string[]; // Добавляем поле images в интерфейс продукта
   // Добавьте другие поля по мере необходимости
 }
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-
-  const inputRef = React.useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -38,7 +37,12 @@ const ProductsPage = () => {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            {product.title} - ${product.price}
+            <img src={product.images[0]} alt={product.title} style={{ width: '100px', height: '100px' }} />
+            <div>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <p>${product.price}</p>
+            </div>
           </li>
         ))}
       </ul>

@@ -1,14 +1,12 @@
+import React from 'react';
 
-
-
-const ProtectedPage = () => {
-    return (
-        <div>
-            <div>
-                Защищённая страница
-            </div>
-        </div>
-    );
-};
+function ProtectedPage() {
+  return (
+    <div>
+      <h2>Home Page</h2>
+      <p>This is the home page content.</p>
+    </div>
+  );
+}
 
 export default ProtectedPage;

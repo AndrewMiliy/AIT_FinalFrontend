@@ -107,22 +107,14 @@ body {
 }
 
 .login .inputBox input:focus~span,
-.login .inputBox input:valid~span{
+.login .inputBox input:valid~span,
+.login .inputBox input:-webkit-autofill~span{
     transform: translate(15px, -10px);
     font-size: 0.75em;
     background: #fff;
     color: #222;
     padding: 2px 5px;
 }
-
-.login .inputBox input:-webkit-autofill~span {
-    transform: translate(15px, -10px);
-        font-size: 0.75em;
-        background: #fff;
-        color: #222;
-        padding: 2px 5px;
-    }
-
 
 .login .inputBox button[type="submit"] {
     width: 100%;
@@ -171,12 +163,12 @@ body {
 }
 
 .group a:nth-child(2) {
-    background: #f0f;
+    background: rgb(219, 38, 219);
     color: #fff;
     font-weight: 500;
-    box-shadow: 0 0 15px #f0f,
-        0 0 30px #f0f,
-        0 0 60px #f0f;
+    box-shadow: 0 0 15px rgb(219, 38, 219),
+        0 0 30px rgb(219, 38, 219),
+        0 0 60px rgb(219, 38, 219);
 }
 
 input:-webkit-autofill,
